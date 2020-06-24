@@ -2,6 +2,8 @@ const Koa = require("./index");
 
 const app = new Koa();
 
+const port = process.env.PORT || 7000;
+
 app.use(async (ctx, next) => {
   console.log("Middleware 1 Start");
   await next();
@@ -16,4 +18,6 @@ app.use(async (ctx, next) => {
   ctx.body = "hello, world";
 });
 
-app.listen(7000);
+app.listen(7000, function () {
+  console.log("Listening on port " + port);
+});
