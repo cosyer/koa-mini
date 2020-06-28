@@ -1,0 +1,24 @@
+{
+  "name": "koa2-reference",
+  "version": "1.0.0",
+  "description": "A simple Koa2 library implementation",
+  "scripts": {
+      "start:1": "ts-node ./start-1/test.ts",
+      "start:2": "ts-node ./start-2/test.ts",
+      "start:3": "ts-node ./start-3/test.ts",
+      "start:4": "ts-node ./start-4/test.ts",
+      "start:5": "ts-node ./start-5/test.ts",
+      "start:6": "ts-node ./start-6/test.ts"
+  },
+  "keywords": [
+    "Koa2",
+    "TypeScript"
+  ],
+  "author": "cosyer",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.5",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  }
+}
