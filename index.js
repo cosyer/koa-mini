@@ -11,6 +11,7 @@ function compose(middlewares) {
     return dispatch(0);
   };
 }
+
 class Context {
   constructor(req, res) {
     this.req = req;
@@ -35,12 +36,14 @@ class Koa {
         console.error(e);
         ctx.res.statusCode = 500;
         ctx.res.end("Internel Server Error");
+        // 没有数据end返回 有数据 res.send() res.status().json({})
       }
       ctx.res.end(ctx.body);
     };
   }
   use(middleware) {
     this.middlewares.push(middleware);
+    return this; // 方便链式调用
   }
 }
 module.exports = Koa;
