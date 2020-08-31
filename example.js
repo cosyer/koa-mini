@@ -1,8 +1,11 @@
 const Koa = require("./index");
+const { logger } = require("./middlewares/logger");
 
 const app = new Koa();
 
 const port = process.env.PORT || 7000;
+
+app.user(logger())
 
 app.use(async (ctx, next) => {
   console.log("Middleware 1 Start");
