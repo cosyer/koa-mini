@@ -6,5 +6,6 @@ export function logger() {
     await next();
     const ms = Date.now() - start;
     console.log(`${ctx.method} ${ctx.url} ${ctx.status} - ${ms}ms`);
+    // process.hrtime()更准确
   };
 }
